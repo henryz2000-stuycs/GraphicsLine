@@ -4,9 +4,9 @@ from display import *
 def octent(x0, y0, x1, y1):
     try:
         m = float((y1 - y0)) / float((x1 - x0))
-        print m
+        #print m
     except: #vertical line
-        print "vertical line"
+        #print "vertical line"
         return 0
     
     if ((m >= 0) and (m <= 1)):
@@ -21,14 +21,14 @@ def octent(x0, y0, x1, y1):
 def vertical(x, y, y1, screen, color):
     if (y <= y1):
         while (y <= y1 and y <= 500):
-            print "y = "
-            print y
+            #print "y = "
+            #print y
             plot(screen, color, x, y)
             y += 1
     else:
         while (y1 <= y and y1 <= 500):
-            print "y1 = "
-            print y1
+            #print "y1 = "
+            #print y1
             plot(screen, color, x, y1)
             y1 += 1
     
@@ -47,7 +47,7 @@ def draw_line(x0, y0, x1, y1, screen, color):
         
     #octent I
     elif (m == 1):
-        print "octent I"
+        #print "octent I"
         d = 2*A + B
         while x <= x1:
             plot(screen, color, x, y)
@@ -59,7 +59,7 @@ def draw_line(x0, y0, x1, y1, screen, color):
             
     #octent II
     elif (m == 2):
-        print "octent II"
+        #print "octent II"
         d = A + 2*B
         while y <= y1:
             plot(screen, color, x, y)
@@ -71,7 +71,7 @@ def draw_line(x0, y0, x1, y1, screen, color):
 
     #octent VIII
     elif (m == 8):
-        print "octent VIII"
+        #print "octent VIII"
         d = 2*A - B
         while x <= x1:
             plot(screen, color, x, y)
@@ -83,7 +83,7 @@ def draw_line(x0, y0, x1, y1, screen, color):
 
     #octent VII
     elif (m == 7):
-        print "octent VII"
+        #print "octent VII"
         d = A - 2*B
         while y >= y1:
             plot(screen, color, x, y)
