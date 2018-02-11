@@ -9,6 +9,8 @@ white = [ 255, 255, 255 ]
 #draw_line(0, 250, 500, 250, screen, white)#slope 0
 #draw_line(250, 250, 500, 500, screen, white)#slope 1
 
+#=====bouquet code=====
+'''
 x = 0
 while x < 500:
     draw_line(x+50, 500, x+50, 0, screen, white)#draw vertical lines
@@ -32,6 +34,43 @@ for i in range(500):
         x += 50
         y -= changeY
         changeY += random.randint(0, 50)
-    
+   
+'''
+#=====end bouquet code=====
+
+#=====dw test code=====
+#'''
+c = [0, MAX_COLOR, 0]
+s = screen
+
+clear_screen(s);
+#octants 1 and 5
+draw_line(0, 0, XRES-1, YRES-1, s, c);
+draw_line(0, 0, XRES-1, YRES / 2, s, c);
+draw_line(XRES-1, YRES-1, 0, YRES / 2, s, c);
+
+#octants 8 and 4
+c = [0, MAX_COLOR, 255]
+draw_line(0, YRES-1, XRES-1, 0, s, c);
+draw_line(0, YRES-1, XRES-1, YRES/2, s, c);
+draw_line(XRES-1, 0, 0, YRES/2, s, c);
+
+#octants 2 and 6
+c = [255, 0, 0]
+draw_line(0, 0, XRES/2, YRES-1, s, c);
+draw_line(XRES-1, YRES-1, XRES/2, 0, s, c);
+
+#octants 7 and 3
+c = [255, 0, 255]
+draw_line(0, YRES-1, XRES/2, 0, s, c);
+draw_line(XRES-1, 0, XRES/2, YRES-1, s, c);
+
+#horizontal and vertical
+c = [255, 255, 0]
+draw_line(0, YRES/2, XRES-1, YRES/2, s, c);
+draw_line(XRES/2, 0, XRES/2, YRES-1, s, c);
+#'''
+#=====end dw test code=====
+
 display(screen)
 save_extension(screen, 'img.png')
